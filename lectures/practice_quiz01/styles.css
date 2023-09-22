@@ -1,0 +1,11 @@
+img {
+    width: 200px;
+}
+nav{
+    border: solid 1px black;
+}
+header, footer {background-color: grey;}
+section{ border: solid;
+    width: 400px; display: inline-block;
+    #section2 {background-color: hotpink;}
+}
