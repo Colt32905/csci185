@@ -1,45 +1,135 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');* 
+
+{
     box-sizing: border-box;
 }
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
     list-style: circle ;
+    font-family: 'Young Serif', sans-serif;
+    font-size: 11pt;
    
 }
 
-p, a, li {
-    line-height: 1.5em;
-    font-size: 1.1em;
+
+
+p, li, a{
+    line-break: anywhere;
 }
 
-#tutorials, #homework, #inspiration, #class-exercises, #quizzes{ 
+main{ 
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 34% 33%;
 
 
 }
 
-#tutorials{background-color:#e0e5ff;
-grid-column:1/3;
-grid-row: 4/5; }
+#tutorials{background-color:rgb(183, 181, 179);
+grid-column:1;
+grid-row:1/2 ; 
+color:black}
+
+#tutorials a{
+    color: black;
+}
 
 #homework{
-background-color: #d62020;
-grid-column: 1 / 2;}
+background-color:rgb(13, 50, 77);
+grid-column: 2 ;
+grid-row: 1/2;
+
+}
 
 #inspiration{
-    background-color: #3ac7c9;
-    grid-column: 1 / 5;
-    grid-row: 4 / 5;
+    background-color: rgb(255, 87, 20);
+    grid-column: 1/3;
+    grid-row: 2/3 ;
+    
+}
+
+#inspiration ul{
+    float:left;
+    width:50%;
+}
+
+#inspiration a{
+    color: black;
 }
 
 #class-exercises{
-    background-color: #7f7c80;
+    background-color: rgb(13, 50, 77);
+grid-column: 1;
+grid-row:3/4;
+color:white;
+}
+
+#class-exercises a, #class-exercises h2 {
+    color:white;
 }
 
 #quizzes{
-    background-color: white;
+    background-color: rgb(183, 181, 179);
+    grid-column: 2;
+    grid-row:3/4;
 }
+
+#quizzes a{
+    color:black;
+}
+
+#hwul, #hwul a{width:50%;
+text-wrap:wrap;
+
+color:white;}
+
+h2{text-align: center;}
+
+#homework h2{
+    color:white;
+}
+
+#inspiration img{
+    float: right;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 50%;
+    height:85%;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+@media (max-width: 720px){ 
+    body{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    #tutorials{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    #homework{
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    #inspiration{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    #lectures{
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    #quizzes{
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+    
+}
+
