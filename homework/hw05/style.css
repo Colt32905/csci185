@@ -83,7 +83,25 @@ footer {
 /***************************/
 
 /* Your Code Here */
+h1{
+    margin-left:20px;
+    margin-bottom: 10px;
+}
 
+aside a{
+    display:flex;
+    padding:10px;
+    margin-left: 10px;
+
+}
+aside i{
+    padding-right:20px;
+}
+
+a.selected-side{
+    border-left: #1db954 5px solid;
+    
+}
 
 
 
@@ -180,8 +198,21 @@ h2{
 /*****************/
 /* Mobile Design */
 /*****************/
-@media screen and (max-width: 1000px) {}
+@media screen and (max-width: 1000px) {
+    #featured-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+       
+    }
+}
 
 
 
-@media screen and (max-width: 700px) {}
+@media screen and (max-width: 700px){ 
+    #sidebar{display: none;}
+    
+    #featured-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+}
+}
