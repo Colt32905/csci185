@@ -3,8 +3,17 @@ Please answer the following accessibility questions:
 
 1. What accessibility corrections did you have to make?
 
+I had to make alt tags for all of the images and define the language in the html (english). there are still 10 "errors" but it is 
+just the buttons that make the website tabbable.
+
 
 2. Do you think your website is usable if you turn off the CSS? Why or why not?
 
+Usable, yes. user friendly and nicely set up so that the person viewing 
+it is not mad about the whole thing and is generally pleased with the layout? No. It has all of the things together
+that should be together but it is not pleasing to the eye or to anyone looking at using it due to it being gigantic images and small 
+text.
 
 3. Is your site is tabbable? In other words, without the use of the mouse, are all the links and buttons accessible using the tab key?
+
+Yes it is because of the buttons with no value, so that there is something for the tab key to physically select
