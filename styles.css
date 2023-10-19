@@ -39,6 +39,9 @@ color:black}
 background-color:rgb(13, 50, 77);
 grid-column: 2 ;
 grid-row: 1/2;
+display: grid;
+grid-template-columns: 50% 50%;
+
 
 }
 
@@ -79,15 +82,27 @@ color:white;
     color:black;
 }
 
-#hwul, #hwul a{width:50%;
-text-wrap:wrap;
+#hwul, #hwul a{width:100%;
+    grid-column: 1/2;
+/* text-wrap:wrap; */
 
 color:white;}
+
+#hwli2  {
+    float:right;
+    grid-column: 2/3;
+    color:white;
+}
+
+#hwli2 a{
+    color: white;
+}
 
 h2{text-align: center;}
 
 #homework h2{
     color:white;
+    grid-column: 1/3;
 }
 
 #inspiration img{
