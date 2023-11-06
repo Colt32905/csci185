@@ -46,14 +46,14 @@ function setup() {
     // Curve: https://p5js.org/reference/#/p5/curve
 
 
-drawCreature(900,500,'teal' ,250);
-drawCreature(100,500,'purple', 45);
-drawCreature(300,500,'yellow', 50);
-drawCreature(500,500,'navy', 34);
-drawCreature(700,500,'orange', 200);
+drawCreature(900,500,'teal' ,250, true);
+drawCreature(100,500,'purple', 45, false);
+drawCreature(300,500,'yellow', 50, true);
+drawCreature(500,500,'navy', 34, false);
+drawCreature(700,500,'orange', 200, true);
 
     // for debugging:
-    drawGrid(canvasWidth, canvasHeight)
+    drawGrid(canvasWidth, canvasHeight);
     // fill('red');
     // rect(100,50,100,50);
     // fill('black');
@@ -64,10 +64,14 @@ drawCreature(700,500,'orange', 200);
     // fill('white');
     // rect(110,60,30,20);
 }
-    function drawCreature(x,y, color) {
+    function drawCreature(x,y,color,size, isZombie) {
        fill(color);
         circle(x,y,150); //base face shape
-        fill('white')
+       if (isZombie){
+        fill("red")
+       }else{fill('white')}
+       
+        
         circle(x-20,y-20,40);
         circle(x+20,y-20,40);
         
@@ -79,7 +83,7 @@ drawCreature(700,500,'orange', 200);
     }
 
     function drawCreature(x,y, size) {
-        let size=100
+        // let size=100
         let eyeball=size / 7.5;
         circle(x,y,size);
         fill('white');
