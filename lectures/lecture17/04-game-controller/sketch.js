@@ -22,7 +22,7 @@ function moveController(ev) {
     // down arrow moves circle down
 
     // redraw circle:
-    noFill();
+console.log("ArrowUp")
     if (ev.code === "ArrowUp") {
         //Do something:
         y = y - 5;
