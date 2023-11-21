@@ -1,0 +1,23 @@
+1.What did you accomplish this week (i.e. how'd it go)?
+
+This week I was able to get a circle to move using the arrow keys and I was able to get cars to drive across the screen. I was also 
+able to change the color of the circle if it touched a car which is a step towards the "game over" portion of the game
+
+2. What took the most time / was the most challenging part of what you did? Do you feel stuck? How can you get unstuck? 
+Is there any specific feedback that you would like from Sarah?
+
+The hardest part of the whole thing was finding the small issues in the code that should work but decides not to. Yes I felt stuck
+because most of the time I do not understand javascript and how it works I just know that when I do something,
+ 60% of the time it works every time
+
+3. What will you turn in for your final deliverable. Please describe what you plan to accomplish.
+
+I want a game like crossy road where you are an avatar and you must dodge cars and such to get across the screen without being hit
+or possibly falling in water. You can also collect coins as you go that I might add into a sort of shop where you can purchase new 
+avatars or something. you get hit by a car or fall in the water and it is game over and you start from the beginning.
+
+4.Given your experience this week, are you on track to deliver on what you proposed last week? If not, what adjustments 
+to the scope of your project are you planning to make?
+
+My whole project changed so I am starting from scratch as far as scope is concerned but honestly since most of this is javascript
+it will take every bit of time I am allowed because it is confusing to me. I just wanted to make a game because I like games
