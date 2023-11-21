@@ -17,6 +17,13 @@ const c2 = {
     speed: -5,
     color: 'cyan'
 };
+const player={
+    x:100, 
+    y:200,
+    width: 50,
+    fillColor:"red"
+};
+
 
 // required to set up the canvas:
 function setup() {
@@ -44,15 +51,21 @@ function draw() {
     c1.x += c1.speed;
     c2.x += c2.speed;
     // redraw the car:
+    let intersects=checkIntersection(c1,player);
+    console.log(intersects)
+    if(intersects){
+        player.fillColor="hotpink";
+    }
+    else{
+        player.fillColor="red";
+    }
     drawCar(c1.x, c1.y, c1.width, c1.color);
     // drawCar(c2.x, c2.y, c2.width, c2.color);
-    // // draw the grid (optional -- feel free to remove this line):
-    // let x = 100;
-    // let y = 200;
-    // let width = 50;
-    // fill(fillColor);
-    // circle(x, y, width);
-    // drawGrid(canvasWidth, canvasHeight);
+    // draw the grid (optional -- feel free to remove this line):
+   
+    fill(player.fillColor);
+    circle(player.x, player.y, player.width);
+    drawGrid(canvasWidth, canvasHeight);
 
 }
 
@@ -89,39 +102,50 @@ function moveController(ev) {
     console.log("ArrowUp")
     if (ev.code === "ArrowUp") {
         //Do something:
-        y = y - 5;
+        player.y = player.y - 5;
     }
     else if (ev.code === "ArrowDown") {
         //Do something:
-        y = y + 5;
+        player.y = player.y + 5;
     }
 
     else if (ev.code === "ArrowRight") {
         //Do something:
-        x = x + 5;
+        player.x = player.x + 5;
     }
 
     else if (ev.code === "ArrowLeft") {
         //Do something:
-        x = x - 5;
+        player.x = player.x - 5;
     }
     else if (ev.code === "Escape") {
         //Do something:
-        width = width - 5;
+        player.width = player.width - 5;
     }
 
     else if (ev.code === "Space") {
         //Do something:
-        width = width + 5;
+        player.width = player.width + 5;
     }
 
     else if (ev.code === "KeyR") {
         //Do something:
-        fillColor = "red";
+        player.fillColor = "red";
     }
 
     else if (ev.code === "KeyB") {
         //Do something:
-        fillColor = "blue";
+        player.fillColor = "blue";
+    }
+}
+document.addEventListener("keydown",moveController);
+
+
+function checkIntersection(circle1, circle2) {
+    const distance = dist(circle1.x, circle1.y, circle2.x, circle2.y);
+    if (distance <= (circle1.width/2 + circle2.width/2)) {
+        return true;
+    } else {
+        return false;
     }
 }
