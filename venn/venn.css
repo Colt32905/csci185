@@ -1,0 +1,27 @@
+nav{
+    padding: 25px 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+body {
+    font-size: 20px;
+}
+ul_r>li>a p_r {
+    font-style: italic;
+}
+Ul_r>li a{
+    color: blue;
+}
+#einstein {
+    float: left;
+    color: blue;
+}
+#newton {
+    color: red;
+}
+img {
+    width: 1500px;
+    height: 830px
+}

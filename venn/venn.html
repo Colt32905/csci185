@@ -1,57 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JavaScript Venn Diagram</title>
-   
-        <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-core.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.9.0/js/anychart-venn.min.js"></script>
-    <style ty pe="text/css">
-      html,
-      body,
-      #container {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>  
-    <div id="container"></div> 
-    <script>
-        // All the code for the chart will come heredata = [
-            const chartdata= [{
-    x: 'A',
-    value: 100,
-    name: 'Albert \n Einstein'
-  },
-  {
-    x: 'B',
-    value: 100,
-    name: ' \n Key elements available'
-  },
- 
- 
-  {
-    x: ['A', 'B'],
-    value: 15,
-    name: 'Possibility \n of disaster'
-  },
-  
- 
-];
-anychart.onDocumentReady(function () {
-  var data = chartdata;
- 
-  // create venn diagram
-  var chart = anychart.venn(data);
- 
-  // set container id for the chart
-  chart.container('container');
- 
-  // initiate chart drawing
-  chart.draw();
-});
-      </script>
-  </body>
+  <link rel="stylesheet" href="venn.css">
+<br></br>
+<body>
+  Issac Newton and Albert Einstein were two of the most important scientists the world has ever seen. Most people however,  do not know that both of them were religious, at least to some extent. Below you will find a venn diagram giving you a brief overview of their beliefs and their contributions to science. Click on their names to dive deeper into their lives. 
+  <header>
+    <nav>
+      <a href="albert.html"; id="einstein"> Albert Einstein</a>
+      <a href="gravity.html"; id="newton"> Isaac Newton</a>
+    </nav>
+  </header>
+  <img src="../venn/images/fysvenn.jpg">
+</body>
+
+<footer>
+  References
+  <ul_r>
+    <li> [1] <a href="Einsteins God (1).pdf"; target="blank"> <p_r>Einstein's God</p_r> by Walter Isaacson </a></li>
+    <li> [2] Newton's Religious Life and Work - University of Oxford. <a href="https://www.newtonproject.ox.ac.uk/view/contexts/CNTX00001"; target="blank"; id="link2"> https://www.newtonproject.ox.ac.uk/view/contexts/CNTX00001</a></li>
+  </ul_r>
+</footer>
 </html>
