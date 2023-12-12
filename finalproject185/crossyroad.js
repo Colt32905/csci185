@@ -140,11 +140,17 @@ function moveController(ev) {
 }
 document.addEventListener("keydown",moveController);
 
+function displayMessage(){
+    messageElement.innerText="You have been hit. Reset Game.";
+}
+
 
 function checkIntersection(circle1, circle2) {
     const distance = dist(circle1.x, circle1.y, circle2.x, circle2.y);
-    if (distance <= (circle1.width/2 + circle2.width/2)) {
+    if (distance <= (circle1.width/10 + circle2.width/10)) {
         return true;
+        resetGame()
+        displayMessage()
     } else {
         return false;
     }

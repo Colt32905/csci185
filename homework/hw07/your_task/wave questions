@@ -1,0 +1,14 @@
+1. What corrections did you have to make, and how did you make them?
+
+All I had to do was add alt tags to any place where there would be images so that text can be displayed if an image either cannot be loaded due to slow connection or due to the use of a screen reader if the user is blind.
+
+
+2. Is this interface functional without the use of a mouse (i.e., just using keyboard keys)? Why or why not?
+
+Yes, it is functional if you use the tab key to change to where you would like to “click” (enter in this case). It is possible because the tab button jumps the cursor from place to place that the user would click on because those are the only things you could choose to click on in the first place.
+
+
+3. What are other accessibility tests or features you added or would be interested in learning about?
+
+I would be interested in learning about screen readers and other things like that that help those who need assistance just to learn about all of the options in case I or a family member ever needs assistance from them as well.
+

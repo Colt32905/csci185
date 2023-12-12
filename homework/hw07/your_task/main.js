@@ -1,6 +1,6 @@
 const baseURL = 'https://www.apitutor.org/spotify/simple/v1/search';
 
-function search (ev) {
+function search(ev) {
     const term = document.querySelector('#search').value;
     console.log('search for:', term);
     // issue three Spotify queries at once...
@@ -12,32 +12,34 @@ function search (ev) {
     }
 }
 
-function playTrack(trackId){
-   const template= `
-   <iframe style="border-radius:12px" 
+function playTrack(trackId) {
+    const template = `
+   <iframe 
+        style="border-radius:12px" 
         src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator" 
         width="100%" 
         height="352" 
         frameBorder="0" 
         allowfullscreen="" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy"></iframe>
+        loading="lazy">
+        </iframe>
     `;
-    document.querySelector('#artist').innerHTML=template;
+    document.querySelector('#artist').innerHTML = template;
 }
 
-async function getTracks (term) {
-   const url=`https://www.apitutor.org/spotify/simple/v1/search?type=track&q=${term}`;
-   const response= await fetch(url);
-   const trackData=await response.json();
+async function getTracks(term) {
+    const url = `https://www.apitutor.org/spotify/simple/v1/search?type=track&q=${term}`;
+    const response = await fetch(url);
+    const trackData = await response.json();
+    document.querySelector("#tracks").innerHTML = "";
 
-   for(let i=0; i<5; i++) {
-   const track=trackData[i]
-   console.log(trackData);
-   document.querySelector("#tracks").innerHTML=""
-const template= `
+    for (let i = 0; i < 5; i++) {
+        const track = trackData[i];
+        console.log(trackData);
+        const template = `
 <section class="track-item preview" onclick="playTrack('${track.id}')">
-<img src="${track.album.image_url}">
+<img src="${track.album.image_url}" alt="${track.album.name}">
 <i class="fas play-track fa-play" aria-hidden="true"></i>
 <div class="label">
     <h2>${track.name}</h2>
@@ -47,22 +49,44 @@ const template= `
 </div>
 </section>
 `;
-document.querySelector('#tracks').innerHTML+=template;
+        document.querySelector('#tracks').innerHTML += template;
+    }
 }
-}
-async function getAlbums (term) {
-    
-}
+async function getAlbums(term) {
+    const url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
+    const response = await fetch(url);
+    const albumData = await response.json();
+    document.querySelector("#albums").innerHTML = "";
+    for(let i = 0; i < albumData.length; i++){
+        const album=albumData[i];
+        console.log(album);
+        const template=`
+        <section class="album-card" id="2lATw9ZAVp7ILQcOKPCPqp">
+            <div>
+                <img src="${album.image_url}" alt="${album.name}"></img>
+                <h2>${album.name}</h2>
+                <div class="footer">
+                    <a href="https://open.spotify.com/album/${album.id}" target="_blank">
+                        view on spotify
+                    </a>
+            </div>
+            </div>
+            
+        </section>
+        `;
+        document.querySelector('#albums').innerHTML += template;
 
-async function getArtist (term) {
-const url=`https://www.apitutor.org/spotify/simple/v1/search?type=artist&q=${term}`;
-const response= await fetch(url);
-const artistData=await response.json();
-const artist=artistData[0];
+    }
+}
+async function getArtist(term) {
+    const url = `https://www.apitutor.org/spotify/simple/v1/search?type=artist&q=${term}`;
+    const response = await fetch(url);
+    const artistData = await response.json();
+    const artist = artistData[0];
 
-    const template=`<section class="artist-card" id="3Nrfpe0tUJi4K4DXYWgMUX">
+    const template = `<section class="artist-card" id="3Nrfpe0tUJi4K4DXYWgMUX">
     <div>
-        <img src="${artist.image_url}">
+        <img src="${artist.image_url}" alt="${artist.name}">
         <h2>${artist.name}</h2>
         <div class="footer">
             <a href="${artist.spotify_url}" target="_blank">
@@ -72,7 +96,7 @@ const artist=artistData[0];
     </div>
 </section>
  `;
- document.querySelector('#artist').innerHTML=template;      
+    document.querySelector('#artist').innerHTML = template;
 }
 
 
