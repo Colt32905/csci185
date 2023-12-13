@@ -1,0 +1,36 @@
+header {
+    padding: 25px 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-image-width: 0px;
+    background-color:navy;
+}
+
+h1{
+    color: white;
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    text-transform: uppercase;
+    float: right;
+}
+
+.pics{
+    display: flex; 
+    justify-content: space-around; 
+    padding: 10px; 
+}
+
+.pics img{
+    width: 500px; /* Set the width of each image */
+    height: 500px; /* Maintain aspect ratio */
+
+}
+
+p{
+    font-size: 25px;
+}

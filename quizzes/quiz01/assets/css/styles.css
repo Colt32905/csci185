@@ -44,8 +44,8 @@ header {
     border-image-width: 180px;
 }
 
-header>img {
-    width: 180px;
+header img {
+    width: 1000px;
 }
 
 
@@ -101,7 +101,8 @@ section>a {
 }
 
 
-.landing>img{width: 100%;}
+.landing>img{
+width: 100px;}
 
 footer {
     padding: 50px;
